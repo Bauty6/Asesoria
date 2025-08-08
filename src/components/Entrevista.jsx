@@ -13,12 +13,8 @@ const Entrevista = () => {
     const [domicilio, setDomicilio]=useState("");
     const [barrio, setBarrio]=useState("");
     const [telefono, setTelefono]=useState("");
-    const [emergencia, setEmergencia]=useState("");
-    const [jardin, setJardin] = useState("");
-    const [primaria,setPrimaria] = useState("");
-    const [apreferida, setApreferida] = useState("");
-    const [adificultad, setAdificultad] = useState("");
     const [emergencias, setEmergencias] = useState([""]);
+    const [emergencia, setEmergencia]=useState("");
     const agregarEmergencia = () => {
     setEmergencias([...emergencias, ""]);
     };
@@ -45,10 +41,6 @@ const Entrevista = () => {
         console.log("barrio:", barrio);
         console.log("teléfono:", telefono);
         console.log("contacto de emergencia:", emergencia);
-        console.log("jardín:", jardin);
-        console.log("primaria:", primaria);
-        console.log("area preferida:", apreferida);
-        console.log("area dificultosa:", adificultad);
         };
 
     return (
@@ -108,45 +100,6 @@ const Entrevista = () => {
                 ))}
                 <button type="button" onClick={agregarEmergencia}> Agregar contacto </button>
             </div>
-            <h3>Datos Escolares</h3>
-            <h4>historia de los aprendizajes escolares (consignar el año, escuela o jardin, el grado cursado, las dificultades, etc.)</h4>
-            <div>
-                <label>Jardín:</label><br/>
-              <textarea
-                value={jardin}
-                onChange={(e) => setJardin(e.target.value)}
-                rows={2}
-                cols={20}
-                placeholder="informacion de jardin"
-                />
-            </div>
-            <div>
-                <label>Primaria:</label><br/>
-                <textarea
-                    value={primaria}
-                    onChange={(e) => setPrimaria(e.target.value)}
-                    rows={2}
-                    cols={20}
-                    placeholder="informacion de primaria"
-                />
-            </div>
-            <div>
-                <label>Areas</label><br/>
-                <textarea
-                    value={apreferida}
-                    onChange={(e) => setApreferida(e.target.value)}
-                    rows={2}
-                    cols={20}
-                    placeholder="Area preferida"/>
-                <textarea
-                    value={adificultad}
-                    onChange={(e) => setAdificultad(e.target.value)}
-                    rows={2}
-                    cols={20}
-                    placeholder="Area dificultosa"/>
-            </div>  
-            
-
         </form>
     );
 
