@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 const TablaFamilia=()=> {
   const [familia, setFamilia] = useState([
-    { nombre: "", parentesco: "", edad: "", escolaridad: "", ocupacion: "", horario: "" }
+    { nombre: "", parentezco: "", edad: "", escolaridad: "", ocupacion: "", horario: "" }
   ]);
 
   const handleChange = (index, e) => {
@@ -13,7 +13,7 @@ const TablaFamilia=()=> {
   };
 
   const agregarFila = () => {
-    setFamilia([...familia, { nombre: "", parentesco: "", edad: "", escolaridad: "", ocupacion: "", horario: "" }]);
+    setFamilia([...familia, { nombre: "", parentezco: "", edad: "", escolaridad: "", ocupacion: "", horario: "" }]);
   };
 
   return (
@@ -23,7 +23,7 @@ const TablaFamilia=()=> {
         <thead>
           <tr>
             <th>Nombre</th>
-            <th>Parentesco</th>
+            <th>Parentezco</th>
             <th>Edad</th>
             <th>Escolaridad</th>
             <th>Ocupación</th>
@@ -34,7 +34,7 @@ const TablaFamilia=()=> {
           {familia.map((familiar, index) => (
             <tr key={index}>
               <td><input type="text" name="nombre" value={familiar.nombre} onChange={(e) => handleChange(index, e)} /></td>
-              <td><input type="text" name="parentesco" value={familiar.parentesco} onChange={(e) => handleChange(index, e)} /></td>
+              <td><input type="text" name="parentezco" value={familiar.parentezco} onChange={(e) => handleChange(index, e)} /></td>
               <td><input type="number" name="edad" value={familiar.edad} onChange={(e) => handleChange(index, e)} /></td>
               <td><input type="text" name="escolaridad" value={familiar.escolaridad} onChange={(e) => handleChange(index, e)} /></td>
               <td><input type="text" name="ocupacion" value={familiar.ocupacion} onChange={(e) => handleChange(index, e)} /></td>
@@ -44,7 +44,6 @@ const TablaFamilia=()=> {
         </tbody>
       </table>
       <button type="button" onClick={agregarFila}>Agregar Familiar</button>
-      <button type="submit">Enviar</button>
     </div>
       
   );

@@ -18,6 +18,15 @@ const Entrevista = () => {
     const [primaria,setPrimaria] = useState("");
     const [apreferida, setApreferida] = useState("");
     const [adificultad, setAdificultad] = useState("");
+    const [emergencias, setEmergencias] = useState([""]);
+    const agregarEmergencia = () => {
+    setEmergencias([...emergencias, ""]);
+    };
+    const cambiarEmergencia = (index, valor) => {const nuevas = [...emergencias];nuevas[index] = valor;
+    setEmergencias(nuevas);
+    };
+
+    
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -44,11 +53,7 @@ const Entrevista = () => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <div>
-                <label>Escuela de origen:</label>
-                <input type="text" value={escorigen} onChange={(e) => setEscorigen(e.target.value)} />
-            </div>
-            <div>
+             <div>
                 <label>Fecha:</label>
                 <input type="date" value={fecha} onChange={(e) => setFecha(e.target.value)} />
             </div>
@@ -63,6 +68,10 @@ const Entrevista = () => {
             <div>
                 <label>Apellido:</label>
                 <input type="text" value={apellido} onChange={(e) => setApellido(e.target.value)} />
+            </div>
+            <div>
+                <label>Escuela de origen:</label>
+                <input type="text" value={escorigen} onChange={(e) => setEscorigen(e.target.value)} />
             </div>
             <div>
                 <label>Lugar de nacimiento:</label>
@@ -94,7 +103,10 @@ const Entrevista = () => {
             </div>
             <div>
                 <label>Contacto de emergencia:</label>
-                <input type="text" value={emergencia} onChange={(e) => setEmergencia(e.target.value)} />
+                {emergencias.map((em, index) => (
+                <input key={index} type="text" value={em} onChange={(e) => cambiarEmergencia(index, e.target.value)} />
+                ))}
+                <button type="button" onClick={agregarEmergencia}> Agregar contacto </button>
             </div>
             <h3>Datos Escolares</h3>
             <h4>historia de los aprendizajes escolares (consignar el año, escuela o jardin, el grado cursado, las dificultades, etc.)</h4>
@@ -132,8 +144,9 @@ const Entrevista = () => {
                     rows={2}
                     cols={20}
                     placeholder="Area dificultosa"/>
-            </div>
-            <button type="submit">Enviar</button>   
+            </div>  
+            
+
         </form>
     );
 
