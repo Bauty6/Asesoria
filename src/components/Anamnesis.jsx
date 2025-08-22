@@ -48,15 +48,16 @@ const Anamnesis = () => {
 
     return (
     <form onSubmit={handleSubmit}>
-        <div>
+        
+        <div id ="cde">
             <label>Condiciones del embarazo</label>
             <input type="text" value={condembarazo} onChange={(e) => setCondembarazo(e.target.value)} />
         </div>
-        <div>
+        <div id="parto">
             <label>Parto</label>
             <input type="text" value={parto} onChange={(e) => setParto(e.target.value)} />
         </div>
-        <div>
+        <div id="tratamiento">
             <label>Tratamientos</label>
             <input type="radio" id="si" value={tratamientos} name="trat" onChange={() => setTratamientos(true)} />si
             <input type="radio" id="no" value={tratamientos} name="trat" onChange={() => setTratamientos(false)} />no
@@ -65,11 +66,11 @@ const Anamnesis = () => {
             <label>¿Cuales?</label>
             <input type="text" value="" onChange={(e) => setTratamientos(e.target.value)} />
         </div>
-        <div>
+        <div id="pato peri">
             <label>Patologia perinatal</label>
         <input type="text" value={patologiap} onChange={(e) => setPatologiap(e.target.value)} />
         </div>
-        <div>
+        <div id="enfermedades padecidas">
             <label>Enfermedades padecidas</label>
             <input type="radio" id="si" value={enfermedadespadecidas} name="ep" onChange={() => setEnfermedadespadecidas(true)} />si
             <input type="radio" id="no" value={enfermedadespadecidas} name="ep" onChange={() => setEnfermedadespadecidas(false)} />no
@@ -78,7 +79,7 @@ const Anamnesis = () => {
             <label>¿Cuales?</label>
             <input type="text" value="" onChange={(e) => setEnfermedadespadecidas(e.target.value)} />
         </div>
-        <div>
+        <div id="alergias">
             <label>Alergias</label>
             <input type="radio" id="si" value={alergias} name="al" onChange={() => setAlergias(true)} />si
             <input type="radio" id="no" value={alergias} name="al" onChange={() => setAlergias(false)} />no
@@ -87,7 +88,7 @@ const Anamnesis = () => {
             <label>¿Cuales?</label>
             <input type="text" value="" onChange={(e) => setAlergias(e.target.value)} />
         </div>
-        <div>
+        <div id="patologia respiratotria">
             <label>Patologías respiratorias</label>
             <input type="radio" id="si" value={patrespiratorias} name="pr" onChange={() => setPatrespiratorias(true)} />si
             <input type="radio" id="no" value={patrespiratorias} name="pr" onChange={() => setPatrespiratorias(false)} />no
@@ -96,11 +97,11 @@ const Anamnesis = () => {
             <label>¿Cuales?</label>
             <input type="text" value="" onChange={(e) => setPatrespiratorias(e.target.value)} />
         </div>
-        <div>
+        <div id="otras">
             <label>Otras?</label>
             <input type="text" value={otrasPatologias} onChange={(e) => setOtraspatologias(e.target.value)} />
         </div>
-        <div>
+        <div id="medicamentos">
             <label>Toma medicamentos</label>
             <input type="radio" id="si" value={medicamentos} name="med" onChange={() => setMedicamentos(true)} />si
             <input type="radio" id="no" value={medicamentos} name="med" onChange={() => setMedicamentos(false)} />no
@@ -109,7 +110,7 @@ const Anamnesis = () => {
             <label>¿Cuales?</label>
             <input type="text" value="" onChange={(e) => setMedicamentos(e.target.value)} />
         </div>
-        <div> 
+        <div id="atenciones"> 
             <label>Atenciones:(psicológica, fonoaudiológica, etc)</label>
             <input type="radio" id="si" value={Atenciones} name="at" onChange={() => setAtenciones(true)} />si
             <input type="radio" id="no" value={Atenciones} name="at" onChange={() => setAtenciones(false)} />no
@@ -118,7 +119,7 @@ const Anamnesis = () => {
             <label>¿Cuales?</label>
             <input type="text" value="" onChange={(e) => setAtenciones(e.target.value)} />
         </div>
-        <div>
+        <div disminuciones>
             <label>Disminuciones</label>
             <input type="radio" id="si" value={disminuciones} name="dism" onChange={() => setDisminuciones(true)} />si
             <input type="radio" id="no" value={disminuciones} name="dism" onChange={() => setDisminuciones(false)} />no
@@ -127,7 +128,7 @@ const Anamnesis = () => {
             <label>¿Cuales?</label>
             <input type="text" value="" onChange={(e) => setDisminuciones(e.target.value)} />
         </div>
-        <div>
+        <div id="tiene jucaid">
              <label> ¿Posee certificado de JUCAID? </label>
              <input type="radio" id="si" value={jucaid} name="jucaid" onChange={() => setJucaid(true)} /> si
              <input type="radio" id="no" value={jucaid} name="jucaid" onChange={() => setJucaid(false)} /> no
@@ -136,7 +137,7 @@ const Anamnesis = () => {
             <label>ingrese credencial </label>
             <input type="text" value="" onChange={(e) => setJucaid(e.target.value)} />
         </div>
-        <div> 
+        <div id="situacion judicial"> 
             <label>Se encuentra bajo situcion Judicial</label>
            <input type="radio" id="si" value={judicial} name="judicial" onChange={() => setJudicial(true)} /> si
            <input type="radio" id="no" value={judicial} name="judicial" onChange={() => setJudicial(false)} /> no
@@ -145,7 +146,7 @@ const Anamnesis = () => {
             <label>Caso por la detencion</label>
             <input type="text" value={caso} onChange={(e) => setCaso(e.target.value)} />
         </div>
-        <div>
+        <div id="actividad extraescolar">
             <label>Realiza actividad Extraescolar</label>
             <input type="radio" id="si" value={extraesc}  name="ext" onChange={() => setExtraesc(true)} />si
             <input type="radio" id="no" value={extraesc} name="ext" onChange={() => setExtraesc(false)} />no
@@ -154,11 +155,11 @@ const Anamnesis = () => {
             <label>¿cual?</label>
             <input type="text" value="" onChange={(e) => setExtraesc(e.target.value)} />
         </div>
-        <div>
+        <div id="eleccion esc">
             <label>Elección de la escuela</label>
             <input type="text" value={eleccion} onChange={(e) => setEleccion(e.target.value)} />
         </div>
-        <div>
+        <div id="hermanos">
             <label>Tiene hermanos dentro de la escuela</label>
             <input type="radio" id="si" value={hermanos} name="herm" onChange={() => setHermanos(true)} />si
             <input type="radio" id="no" value={hermanos} name="herm" onChange={() => setHermanos(false)} />no
@@ -167,7 +168,7 @@ const Anamnesis = () => {
             <label>Turno al que el hermano asiste</label>
             <input type="text" value={turno} onChange={(e) => setTurno(e.target.value)} />
         </div>
-        <div>
+        <div id="observaciones">
             <label>Observaciones</label><br/>
             <textarea
                 value={observaciones}

@@ -1,13 +1,118 @@
 body {
-  margin: 0;
+  margin: 5;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+    font: size 30px;;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  form {
+  background-color: rgb(19, 205, 205); /* Fondo blanco del formulario */
+  border: 15px solid #000000; /* Borde grueso azul */
+  border-radius: 15px; /* Bordes redondeados */
+  padding: 20px;
 }
+
+  text-align: center;
+  font-size: 30px;
+
+  input[type="text"],
+  input[type="date"],
+  input[type="number"],
+  input[type="tel"] {
+  width: 250px;     
+  height: 30px;     
+  font-size: 16px;   
+  padding: 5px 10px; 
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  width: 400px;  
+  height: 150px;     
+  font-size: 16px;   
+  padding: 10px;     
+  border-radius: 6px;
+  border: 1px solid #ccc;
+ }
+
+Ta {
+  width: 400px;     
+  height: 150px;    
+  font-size: 16px;   
+  padding: 10px;   
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  
+}
+
+input[type="checkbox"] {
+  width: 30px;  
+  height: 40px;  
+}
+
+
+}
+
+
+
+
+/* Para toda tabla */
+table {
+  width: 100%;          
+  font-size: 18px;      
+  
+}
+
+/* Para bordes */
+table, th, td {
+  border: 1px solid rgb(255, 0, 0);
+}
+
+/* Encabezado de la tabla */
+th {
+  background-color: #ffffff; 
+  color: rgb(255, 0, 0);
+  padding: 8px;
+  text-align: center;
+}
+
+/* Celdas normales */
+td {
+  padding: 8px;
+  text-align: center;
+}
+
+button {
+  background-color: #00B0F0;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 20px auto 0 auto; /* Centrado y pegado al formulario */
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+ 
+}
+.cde { 
+
+  display: flex;
+  justify-content: left;
+  gap: 10px;  
+}
+
+.inline {
+  display: flex;
+  justify-content: flex-start; /* alinea todo a la izquierda */
+  gap: 10px;
 }
