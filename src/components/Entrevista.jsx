@@ -45,6 +45,9 @@ const Entrevista = () => {
 
     return (
         <form onSubmit={handleSubmit}>
+            <div>
+                <h1>Entrevista</h1>
+            </div>
              <div>
                 <label>Fecha:</label>
                 <input type="date" value={fecha} onChange={(e) => setFecha(e.target.value)} />
