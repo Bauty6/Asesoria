@@ -1,23 +1,14 @@
-import Entrevista from './components/Entrevista';
-import TablaFamilia from './components/Tabla';
-import Anamnesis from './components/Anamnesis';
-import SubmitButton from './components/SubmitButton';
-import DatosEscolares from './components/DatosEscolares';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import AppRoute from './pages/routes/Approute';
 
 
 
 const App= () => {
   return (
-    <div className="App">
-    <h1>Formulario de Entrevista</h1>
-      <Entrevista />
-      <h2>Grupo Familiar Conviviente</h2>
-      <TablaFamilia />
-      <DatosEscolares />
-      <h2>Formulario de Anamnesis</h2>
-     <Anamnesis/>
-     <submitButton onClick={() => alert("Formulario enviado")}>Enviar</submitButton>
-    </div>
+      <Router>
+       <AppRoute />
+      </Router>
   );
 }
 
